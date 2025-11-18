@@ -100,7 +100,7 @@ export default function HomePage() {
             alt={team.groupAlt}
             width={1600}
             height={900}
-            className=" w-full h-full object-cover bg-slate-950 "
+            className="bg-slate-950 "
             priority
           />
         </div>

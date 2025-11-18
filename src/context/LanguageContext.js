@@ -106,32 +106,32 @@ const translations = {
         title: 'Multidisciplinary members guiding the work',
         description:
           'Researchers, farmer champions, and policy strategists collaborate to stress-test ideas before they reach the field.',
-        groupImage: '/images/group-pic.jpeg',
+        groupImage: '/images/group_picture.jpeg',
         groupAlt: 'Think tank members at the field lab in Turkana',
         members: [
           {
             name: 'Marwat Dhul Hijja Karemera',
             role: 'Team Lead',
             focus: 'Leads community listening loops and rapid prototyping cycles.',
-            image: '/images/group-pic.jpeg',
+            image: '/images/marwat.jpeg',
           },
           {
             name: 'Ahmed Osman Muhammad',
             role: 'Comminications & Tech Lead',
             focus: 'Builds climate dashboards and SMS intelligence flows.',
-            image: '/images/group-pic.jpeg',
+            image: '/images/ahmed.jpeg',
           },
           {
             name: 'Didier Abizera',
             role: 'Partnerships & Research Lead',
             focus: 'Designs blended capital structures for farmer-led ventures.',
-            image: '/images/group-pic.jpeg',
+            image: '/images/didier.jpeg',
           },
           {
             name: 'Queen Sandra Hakizimana',
             role: 'Human-centered designer & System Archtect',
             focus: 'Leads service design sprints and product usability testing.',
-            image: '/images/group-pic.jpeg',
+            image: '/images/queen.jpeg',
           },
         ],
       },
