@@ -4,22 +4,17 @@ import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 
 const quickLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Climate Tools', href: '/climate-tools' },
-  { label: 'Resources', href: '/resources' },
-  { label: 'Stories', href: '/stories' },
-  { label: 'Data & Insights', href: '/insights' },
-  { label: 'Events', href: '/events' },
-  { label: 'Marketplace', href: '/marketplace' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Problem', href: '#problem' },
+  { label: 'Mission', href: '#mission' },
+  { label: 'Solution', href: '#solution' },
+  { label: 'Team', href: '#team' },
+  { label: 'Prototype', href: '#prototype' },
+  { label: 'Challenges', href: '#challenges' },
 ];
 
 const socialLinks = [
-  { label: 'WhatsApp', href: 'https://wa.me/254700000000' },
-  { label: 'Facebook', href: 'https://facebook.com' },
-  { label: 'YouTube', href: 'https://youtube.com' },
-  { label: 'X (Twitter)', href: 'https://twitter.com' },
+  { label: 'YouTube', href: 'https://youtu.be/tNZWS2-06Wg?si=Il5tn_JsfwGNeLsA' },
+  { label: 'Instagram', href: 'https://www.instagram.com/afri_nex?igsh=MWxtY3ZjZTFtaDhyeA==' },
 ];
 
 export function Footer() {
@@ -31,7 +26,7 @@ export function Footer() {
         <div className="max-w-sm space-y-4">
           <div className="flex items-center gap-2 text-lg font-semibold tracking-tight">
             <span className="rounded-full bg-emerald-400/20 p-2 text-emerald-300">🌿</span>
-            <span>Turkana & Mandera Climate Hub</span>
+            <span>Afrinex</span>
           </div>
           <p className="text-sm text-white/70">{t('footer.tagline')}</p>
           <p className="text-sm text-white/60">{t('footer.newsletter')}</p>
@@ -70,9 +65,17 @@ export function Footer() {
               Contact
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-white/60">
-              <li>Turkana: +254 700 123 456</li>
-              <li>Mandera: +254 711 987 654</li>
-              <li>Email: support@climatehub.ke</li>
+              <li>
+                WhatsApp:{' '}
+                <a
+                  href="https://wa.me/250788271931"
+                  className="underline decoration-dotted underline-offset-4 hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +250 788 271 931
+                </a>
+              </li>
             </ul>
           </div>
         </div>

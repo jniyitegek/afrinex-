@@ -11,15 +11,12 @@ const LanguageContext = createContext({
 const translations = {
   en: {
     nav: {
-      home: 'Home',
-      about: 'About',
-      tools: 'Climate Tools',
-      resources: 'Resources',
-      stories: 'Stories',
-      insights: 'Data & Insights',
-      contact: 'Contact',
-      events: 'Events',
-      marketplace: 'Marketplace',
+      problem: 'Problem',
+      mission: 'Mission',
+      solution: 'Solution',
+      team: 'Team',
+      prototype: 'Prototype',
+      challenges: 'Challenges',
       more: 'More',
     },
     cta: {
@@ -39,106 +36,176 @@ const translations = {
       rights: 'All rights reserved.',
     },
     home: {
-      hero: {
-        eyebrow: 'Climate resilience for arid counties',
-        title: 'Building drought-smart, flood-ready farms in Turkana and Mandera.',
+      problem: {
+        eyebrow: 'Problem statement',
+        title: 'Climate shocks are outpacing traditional farming know-how',
         description:
-          'We equip smallholder farmers with hyperlocal climate intelligence, regenerative practices, and peer-to-peer mentorship so that households can thrive despite rising heat, erratic rainfall, and recurring shocks.',
-        rapidInsightsTitle: 'Rapid insights',
-        rapidInsightsBody:
-          'Weekly advisory pushes to 4,800+ farmers with crop calendars tuned to Lake Turkana shoreline winds and Mandera River flood pulses.',
-        highlights: [
-          { label: 'Farmers Enrolled', value: '6,200+' },
-          { label: 'Water Points Rehabilitated', value: '38' },
-          { label: 'Hectares Under Climate-Smart Crops', value: '4,500' },
+          'Climate change severely affects small-scale farmers in northern Kenya, particularly in Turkana and Mandera. These farmers face unpredictable weather patterns, prolonged droughts, and occasional floods that reduce crop yields by up to 40% each year (FAO, 2021; Kenya Climate-Smart Agriculture Strategy, 2017). The problem persists year-round, driven by deforestation, pollution, and greenhouse gas emissions that trap heat in the atmosphere. Without action in the next 2–3 years, food security, livelihoods, and community stability will decline sharply.',
+        bullets: [
+          '67% of farmers rely on rain-fed systems that fail at least once every three seasons.',
+          'Only 22% receive actionable weather alerts before drought or flood events.',
+          'Fragmented data makes it hard for policymakers to prioritize investments.',
         ],
-        supportNote:
-          'Farmer networks in Lokitaung and Rhamu share ground-truthed rainfall logs to improve our seasonal outlooks.',
-        supportImageAlt: 'Farmer training under acacia shade',
       },
-      quickLinksSection: {
-        eyebrow: 'Start here',
-        title: 'Key pathways to climate resilience',
+      mission: {
+        eyebrow: 'Mission',
+        title: 'Empower arid-county innovators to co-create resilient food systems',
         description:
-          'Tap into guidance, real-time updates, and community stories designed for pastoralists, agro-pastoralists, and irrigated farmers across Turkana and Mandera.',
+          'Our mission is to support farmers in northern Kenya, particularly Turkana and Mandera, to adapt to climate change by promoting sustainable farming practices, improving access to reliable weather information, and strengthening community resilience.',
+        pillars: [
+          'Translate science into hyperlocal, human-centered advisories.',
+          'Unlock inclusive markets for climate-resilient inputs and services.',
+          'Elevate community voices in county and national policy dialogues.',
+        ],
       },
-      quickLinks: [
-        {
-          href: '/about',
-          icon: '🎯',
-          eyebrow: 'Who we are',
-          title: 'Mission & partnerships',
-          description:
-            'Learn how we support climate-smart farming with county partners, NGOs, and farmer cooperatives.',
-        },
-        {
-          href: '/climate-tools',
-          icon: '🌦️',
-          eyebrow: 'Plan wisely',
-          title: 'Weather & climate intelligence',
-          description:
-            'Access localized forecasts, advisory alerts, and planting windows for Turkana and Mandera.',
-        },
-        {
-          href: '/resources',
-          icon: '📚',
-          eyebrow: 'Skill up',
-          title: 'Training & guides',
-          description:
-            'Download manuals, watch field demos, and register for climate-smart agronomy trainings.',
-        },
-        {
-          href: '/stories',
-          icon: '🤝',
-          eyebrow: 'Be inspired',
-          title: 'Success stories',
-          description:
-            'Hear from farmer champions transforming livelihoods through indigenous crops and water-saving practices.',
-        },
-      ],
-      exploreLink: 'Explore →',
-      newsSection: {
-        eyebrow: 'Latest updates',
-        title: 'News, workshops, and climate alerts',
+      solution: {
+        eyebrow: 'Solution blueprint',
+        title: 'Smart Climate-Resilient Farming System (SCRFS)',
         description:
-          'Stay ahead of impending heatwaves, flash floods, and market shifts with real-time signals compiled from the Kenya Meteorological Department, NDMA bulletins, and field scouts.',
+          'A mobile and community-driven platform that delivers real-time weather forecasts, irrigation support, climate-smart training, and drought-resistant seed access for Turkana farmers. It blends local knowledge with digital tools so farmers plan better, reduce crop loss, and adapt to unpredictable weather.',
+        layers: [
+          {
+            label: "What's the solution?",
+            detail:
+              'SCRFS provides localized alerts, irrigation support, and training content through SMS/app channels while coordinating seed distribution that withstands long droughts.',
+          },
+          {
+            label: 'How does it work?',
+            detail:
+              'Farmers register via app or SMS, receive weather/planting/irrigation guidance, and can connect with agricultural officers. Data on rainfall, temperature, and soil moisture recommends optimal planting windows and solar-powered irrigation sharing networks.',
+          },
+          {
+            label: 'Top features',
+            detail:
+              '- Weather Forecast Alerts: Daily notifications in local languages.\n- Irrigation Guidance: Recommendations on when/how to irrigate.\n- Training Content: Audio/visual guides on sustainable techniques.\n- Community Support: Peer advice and equipment sharing.',
+          },
+          {
+            label: 'Who implements it?',
+            detail:
+              'Local agricultural officers, NGOs, and climate-tech developers co-lead delivery. Farmer cooperatives and village elders champion registration and training.',
+          },
+          {
+            label: 'Who benefits?',
+            detail:
+              '- Small-scale farmers in Turkana and drought-prone East Africa.\n- Communities relying on rain-fed agriculture.\n- Agricultural officers improving outreach.\n- Youth creating agritech enterprises.',
+          },
+          {
+            label: 'How do users access it?',
+            detail:
+              '- Community sensitization workshops with farmers and elders.\n- Partnerships with mobile providers (e.g., Safaricom) for SMS alerts.\n- Schools/cooperatives as training & registration hubs.\n- Pilot with 20 farmers, iterate, and scale.',
+          },
+          {
+            label: 'Unique selling point',
+            detail:
+              'Unlike smartphone-first apps, SCRFS combines SMS technology, local knowledge, solar irrigation, and drought-resilient seed distribution so farmers make data-driven decisions even with limited connectivity.',
+          },
+        ],
       },
-      newsItems: [
-        {
-          title: 'Turkana agroforestry demo plots hit 85% survival rate',
-          date: 'Oct 24, 2025',
-          summary:
-            'Lead farmers in Lokichar tested zai pits and drip irrigation kits yielding 40% higher seedling survival despite erratic rains.',
-          category: 'Success Story',
-        },
-        {
-          title: 'Mandera climate alert: Strong winds expected next week',
-          date: 'Nov 11, 2025',
-          summary:
-            'Farmers advised to secure shade nets and delay spraying between Nov 14-18 due to gusts reaching 55 km/h across Rhamu and Elwak.',
-          category: 'Climate Alert',
-        },
-        {
-          title: 'Joint training with NDMA on drought-ready fodder banks',
-          date: 'Nov 02, 2025',
-          summary:
-            'Over 220 pastoralists trained on sorghum silage and early warning triggers integrated with mobile SMS advisories.',
-          category: 'Workshop',
-        },
-      ],
+      team: {
+        eyebrow: 'Think tank',
+        title: 'Multidisciplinary members guiding the work',
+        description:
+          'Researchers, farmer champions, and policy strategists collaborate to stress-test ideas before they reach the field.',
+        groupImage: '/images/group-pic.jpeg',
+        groupAlt: 'Think tank members at the field lab in Turkana',
+        members: [
+          {
+            name: 'Marwat Dhul Hijja Karemera',
+            role: 'Program director · Turkana & Mandera',
+            focus: 'Leads community listening loops and rapid prototyping cycles.',
+            image: '/images/group-pic.jpeg',
+          },
+          {
+            name: 'Ahmed Osman Muhammad',
+            role: 'Data strategist · Mandera',
+            focus: 'Builds climate dashboards and SMS intelligence flows.',
+            image: '/images/group-pic.jpeg',
+          },
+          {
+            name: 'Didier Abizera',
+            role: 'Partnerships & finance · Nairobi',
+            focus: 'Designs blended capital structures for farmer-led ventures.',
+            image: '/images/group-pic.jpeg',
+          },
+          {
+            name: 'Queen Sandra Hakizimana',
+            role: 'Human-centered designer · Lodwar',
+            focus: 'Leads service design sprints and product usability testing.',
+            image: '/images/group-pic.jpeg',
+          },
+        ],
+      },
+      prototype: {
+        eyebrow: 'Prototype',
+        title: 'Climate Command Board v1.2',
+        description:
+          'A progressive web app that fuses satellite feeds, farmer observations, and program data into a single decision plane usable offline.',
+        highlights: [
+          'Bilingual UX (English/Kiswahili) with voice prompts for low-literacy users.',
+          'Plug-and-play widgets for drought triggers, fodder stocks, and borehole health.',
+          'Secure API endpoints so partners can integrate with existing MIS tools.',
+        ],
+        callToAction: 'Request live demo',
+        mockup: '/images/prototype.jpeg',
+        mockupAlt: 'Prototype screens for the Climate Command Board',
+      },
+      challenges: {
+        eyebrow: 'Field-tested challenges',
+        title: 'Our E-lab challenges videos/ created impact in the community',
+        description:
+          'Each challenge package includes short explainer videos from the field plus notes on what is working.',
+        items: [
+          {
+            title: 'Get to know the team Afrinex',
+            description:
+              'Meet the Afrinex think tank and hear how each member contributes to climate-resilient farming breakthroughs.',
+            videoUrl: 'https://www.youtube.com/embed/9UdZT07HONc',
+            embed: {
+              width: 1521,
+              height: 489,
+              allow:
+                'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+              referrerPolicy: 'strict-origin-when-cross-origin',
+            },
+          },
+          {
+            title: 'Discover Africa: The story of Nandi people from Kenya',
+            description:
+              'A storytelling spotlight on the Nandi community’s climate resilience practices, showing how cultural knowledge guides adaptation across Kenya.',
+            videoUrl: 'https://www.youtube.com/embed/OMYdcGAzr58',
+            embed: {
+              width: 1521,
+              height: 489,
+              allow:
+                'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+              referrerPolicy: 'strict-origin-when-cross-origin',
+            },
+          },
+          {
+            title: 'Mission 2: Smart climate within northern Kenya (Turkana & Mandera)',
+            description:
+              'An inside look at the Mission 2 initiative accelerating smart climate adoption in Turkana and Mandera through farmer training, data tools, and adaptive infrastructure.',
+            videoUrl: 'https://www.youtube.com/embed/tNZWS2-06Wg',
+            embed: {
+              width: 853,
+              height: 480,
+              allow:
+                'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+              referrerPolicy: 'strict-origin-when-cross-origin',
+            },
+          },
+        ],
+      },
     },
   },
   sw: {
     nav: {
-      home: 'Nyumbani',
-      about: 'Kuhusu',
-      tools: 'Zana za Hali ya Hewa',
-      resources: 'Rasilimali',
-      stories: 'Hadithi',
-      insights: 'Takwimu & Maarifa',
-      contact: 'Wasiliana',
-      events: 'Matukio',
-      marketplace: 'Soko',
+      problem: 'Tatizo',
+      mission: 'Dhamira',
+      solution: 'Suluhu',
+      team: 'Timu',
+      prototype: 'Mfano',
+      challenges: 'Changamoto',
       more: 'Zaidi',
     },
     cta: {
@@ -158,93 +225,166 @@ const translations = {
       rights: 'Haki zote zimehifadhiwa.',
     },
     home: {
-      hero: {
-        eyebrow: 'Uhimilivu wa tabianchi kwa maeneo kame',
-        title: 'Kujenga mashamba yanayostahimili ukame na mafuriko Turkana na Mandera.',
+      problem: {
+        eyebrow: 'Tamko la tatizo',
+        title: 'Misukosuko ya tabianchi inazidi ujuzi wa kilimo wa jadi',
         description:
-          'Tunawawezesha wakulima wadogo kwa taarifa za hali ya hewa za maeneo yao, mbinu za kuzalisha endelevu, na ushauri wa wakulima wenzao ili kaya ziweze kustawi licha ya joto kuongezeka, mvua zisizo tabirika, na misukosuko inayoendelea.',
-        rapidInsightsTitle: 'Maarifa ya haraka',
-        rapidInsightsBody:
-          'Ushauri wa kila wiki unafikia zaidi ya wakulima 4,800 ukiwa na kalenda za mazao zilizopangwa kulingana na upepo wa Ziwa Turkana na mawimbi ya mafuriko ya Mto Mandera.',
-        highlights: [
-          { label: 'Wakulima Waliosajiliwa', value: '6,200+' },
-          { label: 'Vyanzo vya Maji Vilivyoboreshwa', value: '38' },
-          { label: 'Hekta zilizo na Mazao ya Ustahimilivu', value: '4,500' },
+          'Mabadiliko ya tabianchi yanaathiri vibaya wakulima wadogo wa kaskazini mwa Kenya, hasa Turkana na Mandera. Wakulima hawa hukabiliwa na hali ya hewa isiyotabirika, ukame mrefu, na mafuriko ya mara kwa mara ambayo hupunguza mavuno kwa hadi asilimia 40 kila mwaka (FAO, 2021; Kenya Climate-Smart Agriculture Strategy, 2017). Tatizo hili hudumu mwaka mzima kutokana na ukataji miti, uchafuzi, na hewa ukaa inayonaswa angani. Bila kuchukua hatua ndani ya miaka 2–3 ijayo, usalama wa chakula na ustawi wa jamii hizi utazorota zaidi.',
+        bullets: [
+          'Asilimia 67 ya wakulima hutegemea mvua pekee ambazo hushindwa angalau mara moja katika misimu mitatu.',
+          'Ni asilimia 22 pekee hupokea tahadhari za hali ya hewa zenye hatua kabla ya ukame au mafuriko.',
+          'Data iliyotawanyika hufanya iwe vigumu kwa watunga sera kuweka kipaumbele uwekezaji.',
         ],
-        supportNote:
-          'Mitandao ya wakulima ya Lokitaung na Rhamu inashirikisha rekodi halisi za mvua ili kuboresha utabiri wetu wa msimu.',
-        supportImageAlt: 'Mafunzo ya wakulima chini ya mti wa acacia',
       },
-      quickLinksSection: {
-        eyebrow: 'Anza hapa',
-        title: 'Njia kuu za uhimilivu wa tabianchi',
+      mission: {
+        eyebrow: 'Dhamira',
+        title: 'Kuimarisha wabunifu wa maeneo kame kuunda mifumo ya chakula yenye uhimilivu',
         description:
-          'Pata mwongozo, masasisho ya papo kwa papo, na hadithi za jamii kwa ajili ya wafugaji, wakulima wanaochanganya, na wakulima wa umwagiliaji kote Turkana na Mandera.',
+          'Dhamira yetu ni kusaidia wakulima wa kaskazini mwa Kenya, hasa Turkana na Mandera, kuzoea mabadiliko ya tabianchi kwa kukuza mbinu endelevu za kilimo, kuboresha upatikanaji wa taarifa za kuaminika za hali ya hewa, na kuimarisha uhimilivu wa jamii.',
+        pillars: [
+          'Kutafsiri sayansi kuwa ushauri wa maeneo mahsusi unaolenga watu.',
+          'Kufungua masoko jumuishi kwa pembejeo na huduma zinazostahimili tabianchi.',
+          'Kuinua sauti za jamii katika mijadala ya sera za kaunti na taifa.',
+        ],
       },
-      quickLinks: [
-        {
-          href: '/about',
-          icon: '🎯',
-          eyebrow: 'Sisi ni nani',
-          title: 'Dira na ushirikiano',
-          description:
-            'Jifunze jinsi tunavyosaidia kilimo kinachostahimili tabianchi kwa kushirikiana na kaunti, mashirika, na vyama vya wakulima.',
-        },
-        {
-          href: '/climate-tools',
-          icon: '🌦️',
-          eyebrow: 'Panga kwa ufanisi',
-          title: 'Ujasusi wa hali ya hewa',
-          description:
-            'Fikia utabiri wa maeneo mahsusi, taarifa za tahadhari, na vipindi vya upandaji kwa Turkana na Mandera.',
-        },
-        {
-          href: '/resources',
-          icon: '📚',
-          eyebrow: 'Ongeza ujuzi',
-          title: 'Mafunzo na miongozo',
-          description:
-            'Pakua mwongozo, tazama maonyesho shambani, na jisajili kwenye mafunzo ya kilimo kinachostahimili tabianchi.',
-        },
-        {
-          href: '/stories',
-          icon: '🤝',
-          eyebrow: 'Pata msukumo',
-          title: 'Hadithi za mafanikio',
-          description:
-            'Sikiliza mabingwa wa wakulima wanaobadili maisha kupitia mazao asilia na mbinu za kuokoa maji.',
-        },
-      ],
-      exploreLink: 'Chunguza →',
-      newsSection: {
-        eyebrow: 'Masasisho ya hivi karibuni',
-        title: 'Habari, warsha, na tahadhari za hali ya hewa',
+      solution: {
+        eyebrow: 'Mpango wa suluhu',
+        title: 'Mfumo Mahiri wa Ustahimilivu wa Kilimo (SCRFS)',
         description:
-          'Endelea mbele ya mawimbi ya joto, mafuriko ya ghafla, na mabadiliko ya soko kwa taarifa zinazokusanywa kutoka Idara ya Hali ya Hewa ya Kenya, taarifa za NDMA, na wachunguzi wa mashinani.',
+          'Huu ni jukwaa la simu na jamii linalotoa utabiri wa hali ya hewa, usaidizi wa umwagiliaji, mafunzo ya kilimo kinachostahimili tabianchi, na upatikanaji wa mbegu zinazostahimili ukame kwa wakulima wa Turkana. Linaunganisha maarifa ya wenyeji na zana za kidijitali ili wakulima wapange vyema, kupunguza hasara, na kuzoea hali ya hewa isiyotabirika.',
+        layers: [
+          {
+            label: 'Suluhu ni ipi?',
+            detail:
+              'SCRFS hutoa taarifa za eneo husika, usaidizi wa umwagiliaji, na maudhui ya mafunzo kupitia SMS/app huku likiratibu usambazaji wa mbegu zinazostahimili ukame mrefu.',
+          },
+          {
+            label: 'Inafanyaje kazi?',
+            detail:
+              'Wakulima hujisajili kupitia app au SMS, hupokea miongozo ya hali ya hewa/upandaji/umwagiliaji, na kuunganishwa na maafisa wa kilimo. Data ya mvua, joto, na unyevu wa udongo hupendekeza muda bora wa kupanda/kupanda upya na kushiriki pampu za umwagiliaji zinazoendeshwa na nishati ya jua.',
+          },
+          {
+            label: 'Vipengele kuu',
+            detail:
+              '- Arifa za utabiri wa hali ya hewa: SMS/app za kila siku kwa lugha za eneo.\n- Mwongozo wa umwagiliaji: Ushauri wa lini na namna ya kumwagilia.\n- Maudhui ya mafunzo: Mwongozo wa sauti/video kuhusu mbinu endelevu.\n- Usaidizi wa jamii: Wakulima kuunganishwa kwa ushauri na kushiriki vifaa.',
+          },
+          {
+            label: 'Nani ataitekeleza?',
+            detail:
+              'Maafisa wa kilimo wa eneo, NGOs, na wabunifu wa teknolojia ya tabianchi. Vyama vya wakulima na wazee wa kijiji wanakuwa mabalozi wa usajili na mafunzo.',
+          },
+          {
+            label: 'Nani atanufaika?',
+            detail:
+              '- Wakulima wadogo Turkana na maeneo mengine kame ya Afrika Mashariki.\n- Jamii zinazotegemea kilimo cha mvua.\n- Maafisa wa kilimo wanaohitaji zana bora za uhamasishaji.\n- Vijana wanaoweza kuanzisha biashara za agritech.',
+          },
+          {
+            label: 'Suluhu itawafikiaje watumiaji?',
+            detail:
+              '- Warsha za uhamasishaji na wakulima na wazee wa jamii.\n- Ushirikiano na watoa huduma za simu (mf. Safaricom) kufikisha SMS.\n- Shule na vyama vya ushirika kama vituo vya mafunzo/usajili.\n- Majaribio kwa wakulima 20, kukusanya mrejesho, kisha kupanua.',
+          },
+          {
+            label: 'Tofauti kuu (USP)',
+            detail:
+              'Tofauti na app zinazohitaji smartphone na mtandao thabiti, SCRFS inaunganisha teknolojia ya SMS, maarifa ya jamii, umwagiliaji wa nishati ya jua, na mbegu zinazostahimili ukame ili kuwezesha maamuzi yanayotegemea data.',
+          },
+        ],
       },
-      newsItems: [
-        {
-          title: 'Mashamba ya majaribio ya agroforestry Turkana yafikia uhai wa 85%',
-          date: 'Okt 24, 2025',
-          summary:
-            'Wakulima wakuu wa Lokichar walijaribu mashimo ya zai na mifumo ya matone, na kupata uhai wa miche kwa asilimia 40 licha ya mvua zisizo tabirika.',
-          category: 'Hadithi ya Mafanikio',
-        },
-        {
-          title: 'Tahadhari ya hali ya hewa Mandera: Upepo mkali wiki ijayo',
-          date: 'Nov 11, 2025',
-          summary:
-            'Wakulima wanashauriwa kulinda neti za kivuli na kuchelewesha kunyunyizia kati ya Nov 14-18 kutokana na upepo kufikia 55 km/h maeneo ya Rhamu na Elwak.',
-          category: 'Tahadhari ya Tabianchi',
-        },
-        {
-          title: 'Mafunzo ya pamoja na NDMA kuhusu hifadhi ya malisho kavu',
-          date: 'Nov 02, 2025',
-          summary:
-            'Zaidi ya wafugaji 220 walifundishwa namna ya kutengeneza silaji ya mtama na kutumia tahadhari za mapema zinazopelekwa kupitia SMS.',
-          category: 'Warsha',
-        },
-      ],
+      team: {
+        eyebrow: 'Think tank',
+        title: 'Wanachama wa taaluma tofauti wanaoongoza kazi',
+        description:
+          'Watafiti, mabingwa wa wakulima, na wataalamu wa sera hushirikiana kujaribu mawazo kabla hayajaenea mashinani.',
+        groupImage: '/images/group-pic.jpeg',
+        groupAlt: 'Wanachama wa think tank wakifanya kazi Turkana',
+        members: [
+          {
+            name: 'Marwat Dhul Hijja Karemera',
+            role: 'Mkurugenzi wa programu · Turkana & Mandera',
+            focus: 'Anaongoza midahalo ya jamii na midundo ya majaribio ya haraka.',
+            image: '/images/group-pic.jpeg',
+          },
+          {
+            name: 'Ahmed Osman Muhammad',
+            role: 'Mtaalamu wa data · Mandera',
+            focus: 'Anajenga dashibodi za tabianchi na mitiririko ya SMS.',
+            image: '/images/group-pic.jpeg',
+          },
+          {
+            name: 'Didier Abizera',
+            role: 'Ushirikiano & fedha · Nairobi',
+            focus: 'Huchora miundo ya fedha jumuishi kwa miradi inayoongozwa na wakulima.',
+            image: '/images/group-pic.jpeg',
+          },
+          {
+            name: 'Queen Sandra Hakizimana',
+            role: 'Mbunifu wa huduma · Lodwar',
+            focus: 'Anaendesha sprints za usanifu wa huduma na majaribio ya bidhaa.',
+            image: '/images/group-pic.jpeg',
+          },
+        ],
+      },
+      prototype: {
+        eyebrow: 'Mfano',
+        title: 'Bodi ya Amri ya Tabianchi toleo 1.2',
+        description:
+          'Programu endeshi inayochanganya data za setilaiti, uchunguzi wa wakulima, na takwimu za programu katika eneo moja la maamuzi linaloweza kutumika bila mtandao.',
+        highlights: [
+          'Muundo wa lugha mbili (Kiingereza/Kiswahili) wenye vidokezo vya sauti kwa watumiaji wasiojua kusoma.',
+          'Vijisehemu vinavyoweza kuongezwa kwa vichocheo vya ukame, hifadhi za malisho, na hali ya visima.',
+          'API salama ili washirika waweze kuunganisha na mifumo iliyopo.',
+        ],
+        callToAction: 'Omba maonyesho ya moja kwa moja',
+        mockup: '/images/prototype.jpeg',
+        mockupAlt: 'Mionekano ya mfano wa Bodi ya Amri ya Tabianchi',
+      },
+      challenges: {
+        eyebrow: 'Changamoto zilizojaribiwa',
+        title: 'Video za changamoto za E-lab na athari zake kwa jamii',
+        description:
+          'Kila kifurushi cha changamoto kina video fupi za maelezo kutoka shambani pamoja na yale yanayofanya kazi.',
+        items: [
+          {
+            title: 'Wafahamu timu ya Afrinex',
+            description:
+              'Kutana na timu ya Afrinex na ujifunze jinsi kila mwanachama anavyochangia mafanikio ya kilimo kinachostahimili tabianchi.',
+            videoUrl: 'https://www.youtube.com/embed/9UdZT07HONc',
+            embed: {
+              width: 1521,
+              height: 489,
+              allow:
+                'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+              referrerPolicy: 'strict-origin-when-cross-origin',
+            },
+          },
+          {
+            title: 'Gundua Afrika: Hadithi ya watu wa Nandi kutoka Kenya',
+            description:
+              'Simulizi kuhusu mbinu za uhimilivu wa watu wa Nandi, zikionyesha jinsi maarifa ya kitamaduni yanavyoongoza mabadiliko ya tabianchi nchini Kenya.',
+            videoUrl: 'https://www.youtube.com/embed/OMYdcGAzr58',
+            embed: {
+              width: 1521,
+              height: 489,
+              allow:
+                'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+              referrerPolicy: 'strict-origin-when-cross-origin',
+            },
+          },
+          {
+            title: 'Mission 2: Suluhisho la tabianchi kaskazini mwa Kenya (Turkana & Mandera)',
+            description:
+              'Mtazamo wa ndani wa mpango wa Mission 2 unaoharakisha upitishaji wa teknolojia mahiri za tabianchi kupitia mafunzo ya wakulima, zana za data, na miundombinu ya uhimilivu.',
+            videoUrl: 'https://www.youtube.com/embed/tNZWS2-06Wg',
+            embed: {
+              width: 853,
+              height: 480,
+              allow:
+                'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+              referrerPolicy: 'strict-origin-when-cross-origin',
+            },
+          },
+        ],
+      },
     },
   },
 };

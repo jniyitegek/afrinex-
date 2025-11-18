@@ -1,20 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const navItems = [
-  { href: '/', key: 'nav.home' },
-  { href: '/about', key: 'nav.about' },
-  { href: '/climate-tools', key: 'nav.tools' },
-  { href: '/resources', key: 'nav.resources' },
-  { href: '/stories', key: 'nav.stories' },
-  { href: '/insights', key: 'nav.insights' },
-  { href: '/events', key: 'nav.events' },
-  { href: '/marketplace', key: 'nav.marketplace' },
-  { href: '/contact', key: 'nav.contact' },
+  { href: '#problem', key: 'nav.problem' },
+  { href: '#mission', key: 'nav.mission' },
+  { href: '#solution', key: 'nav.solution' },
+  { href: '#team', key: 'nav.team' },
+  { href: '#prototype', key: 'nav.prototype' },
+  { href: '#challenges', key: 'nav.challenges' },
 ];
 
 function LanguageSwitch() {
@@ -52,15 +48,30 @@ function LanguageSwitch() {
 }
 
 export function Header() {
-  const pathname = usePathname();
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState('');
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    const updateHash = () => {
+      setActiveHash(window.location.hash || '#problem');
+    };
+    updateHash();
+    window.addEventListener('hashchange', updateHash);
+    return () => {
+      window.removeEventListener('hashchange', updateHash);
+    };
+  }, []);
 
   const primaryNavItems = navItems.slice(0, 4);
   const dropdownNavItems = navItems.slice(4);
 
-  function handleLinkClick() {
+  function handleLinkClick(targetHash) {
+    setActiveHash(targetHash);
     setIsOpen(false);
     setIsDropdownOpen(false);
   }
@@ -70,15 +81,16 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
           <span className="rounded-full bg-emerald-400/20 p-2 text-emerald-300">🌿</span>
-          <span>Turkana & Mandera Climate Hub</span>
+          <span>Afrinex</span>
         </Link>
         <nav className="hidden items-center gap-1 lg:flex">
           {primaryNavItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = activeHash === item.href;
             return (
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => handleLinkClick(item.href)}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                   isActive
                     ? 'bg-emerald-400 text-slate-900 shadow-lg shadow-emerald-400/30'
@@ -90,11 +102,7 @@ export function Header() {
             );
           })}
           {dropdownNavItems.length > 0 && (
-            <div
-              className="relative"
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
-            >
+            <div className="relative">
               <button
                 type="button"
                 onClick={() => setIsDropdownOpen((prev) => !prev)}
@@ -111,12 +119,12 @@ export function Header() {
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-52 rounded-2xl border border-white/10 bg-slate-900/95 p-2 text-sm shadow-2xl shadow-black/40">
                   {dropdownNavItems.map((item) => {
-                    const isActive = pathname === item.href;
+                    const isActive = activeHash === item.href;
                     return (
                       <Link
                         key={item.href}
                         href={item.href}
-                        onClick={handleLinkClick}
+                        onClick={() => handleLinkClick(item.href)}
                         className={`block rounded-xl px-3 py-2 transition ${
                           isActive
                             ? 'bg-emerald-400 text-slate-900'
@@ -162,12 +170,12 @@ export function Header() {
         <div className="border-t border-white/10 bg-slate-950/95 px-4 pb-4 lg:hidden">
           <nav className="flex flex-col gap-1">
             {primaryNavItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = activeHash === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={handleLinkClick}
+                  onClick={() => handleLinkClick(item.href)}
                   className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                     isActive
                       ? 'bg-emerald-400 text-slate-900 shadow-lg shadow-emerald-400/30'
@@ -185,12 +193,12 @@ export function Header() {
                 </p>
                 <div className="flex flex-col gap-1">
                   {dropdownNavItems.map((item) => {
-                    const isActive = pathname === item.href;
+                    const isActive = activeHash === item.href;
                     return (
                       <Link
                         key={item.href}
                         href={item.href}
-                        onClick={handleLinkClick}
+                        onClick={() => handleLinkClick(item.href)}
                         className={`rounded-full px-3 py-2 text-sm font-medium transition ${
                           isActive
                             ? 'bg-emerald-400 text-slate-900 shadow-lg shadow-emerald-400/30'
