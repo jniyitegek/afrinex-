@@ -134,7 +134,7 @@ const translations = {
             image: '/images/queen.jpeg',
           },
           {
-            name: 'Nathan Nduat',
+            name: 'Nathan Nduati',
             role: 'Research Lead and Video Editor',
             focus: 'Leads and conduct the proper research using attractive visuals.',
             image: '/images/nathan.jpeg',
@@ -301,32 +301,38 @@ const translations = {
         title: 'Wanachama wa taaluma tofauti wanaoongoza kazi',
         description:
           'Watafiti, mabingwa wa wakulima, na wataalamu wa sera hushirikiana kujaribu mawazo kabla hayajaenea mashinani.',
-        groupImage: '/images/group-pic.jpeg',
+        groupImage: '/images/group_picture.jpeg',
         groupAlt: 'Wanachama wa think tank wakifanya kazi Turkana',
         members: [
           {
             name: 'Marwat Dhul Hijja Karemera',
             role: 'Mkurugenzi wa programu · Turkana & Mandera',
             focus: 'Anaongoza midahalo ya jamii na midundo ya majaribio ya haraka.',
-            image: '/images/group-pic.jpeg',
+            image: '/images/marwat.jpeg',
           },
           {
             name: 'Ahmed Osman Muhammad',
             role: 'Mtaalamu wa data · Mandera',
             focus: 'Anajenga dashibodi za tabianchi na mitiririko ya SMS.',
-            image: '/images/group-pic.jpeg',
+            image: '/images/ahmed.jpeg',
           },
           {
             name: 'Didier Abizera',
             role: 'Ushirikiano & fedha · Nairobi',
             focus: 'Huchora miundo ya fedha jumuishi kwa miradi inayoongozwa na wakulima.',
-            image: '/images/group-pic.jpeg',
+            image: '/images/didier.jpeg',
           },
           {
             name: 'Queen Sandra Hakizimana',
             role: 'Mbunifu wa huduma · Lodwar',
             focus: 'Anaendesha sprints za usanifu wa huduma na majaribio ya bidhaa.',
-            image: '/images/group-pic.jpeg',
+            image: '/images/queen.jpeg',
+          },
+          {
+            name: 'Nathan Nduati',
+            role: 'Mbunifu wa huduma · Lodwar',
+            focus: 'Anaendesha sprints za usanifu wa huduma na majaribio ya bidhaa.',
+            image: '/images/nathan.jpeg',
           },
         ],
       },
