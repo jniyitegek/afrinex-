@@ -133,6 +133,12 @@ const translations = {
             focus: 'Leads service design sprints and product usability testing.',
             image: '/images/queen.jpeg',
           },
+          {
+            name: 'Nathan Nduat',
+            role: 'Research Lead and Video Editor',
+            focus: 'Leads and conduct the proper research using attractive visuals.',
+            image: '/images/nathan.jpeg',
+          },
         ],
       },
       prototype: {
