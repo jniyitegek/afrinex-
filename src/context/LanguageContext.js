@@ -111,25 +111,25 @@ const translations = {
         members: [
           {
             name: 'Marwat Dhul Hijja Karemera',
-            role: 'Program director · Turkana & Mandera',
+            role: 'Team Lead',
             focus: 'Leads community listening loops and rapid prototyping cycles.',
             image: '/images/group-pic.jpeg',
           },
           {
             name: 'Ahmed Osman Muhammad',
-            role: 'Data strategist · Mandera',
+            role: 'Comminications & Tech Lead',
             focus: 'Builds climate dashboards and SMS intelligence flows.',
             image: '/images/group-pic.jpeg',
           },
           {
             name: 'Didier Abizera',
-            role: 'Partnerships & finance · Nairobi',
+            role: 'Partnerships & Research Lead',
             focus: 'Designs blended capital structures for farmer-led ventures.',
             image: '/images/group-pic.jpeg',
           },
           {
             name: 'Queen Sandra Hakizimana',
-            role: 'Human-centered designer · Lodwar',
+            role: 'Human-centered designer & System Archtect',
             focus: 'Leads service design sprints and product usability testing.',
             image: '/images/group-pic.jpeg',
           },

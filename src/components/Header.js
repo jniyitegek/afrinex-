@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
@@ -80,7 +81,14 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 text-white backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-          <span className="rounded-full bg-emerald-400/20 p-2 text-emerald-300">🌿</span>
+          <Image
+            src="/images/afrinex-logo.jpg"
+            alt="Afrinex logo"
+            width={36}
+            height={36}
+            className="h-10 w-10 rounded-full object-cover"
+            priority
+          />
           <span>Afrinex</span>
         </Link>
         <nav className="hidden items-center gap-1 lg:flex">

@@ -94,13 +94,13 @@ export default function HomePage() {
 
       <section id="team" className="mx-auto max-w-6xl px-4">
         <SectionTitle eyebrow={team.eyebrow} label={team.title} description={team.description} />
-        <div className="mt-8 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+        <div className="mt-8 h-[80vh] overflow-hidden rounded-3xl border border-white/10 bg-white/5">
           <Image
             src={team.groupImage}
             alt={team.groupAlt}
             width={1600}
             height={900}
-            className="h-80 w-full object-contain bg-slate-950 md:h-[26rem]"
+            className=" w-full h-full object-cover bg-slate-950 "
             priority
           />
         </div>

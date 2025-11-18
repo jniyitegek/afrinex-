@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -25,7 +26,13 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-12 lg:flex-row lg:justify-between">
         <div className="max-w-sm space-y-4">
           <div className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-            <span className="rounded-full bg-emerald-400/20 p-2 text-emerald-300">🌿</span>
+            <Image
+              src="/images/afrinex-logo.jpg"
+              alt="Afrinex logo"
+              width={36}
+              height={36}
+              className="h-10 w-10 rounded-full object-cover"
+            />
             <span>Afrinex</span>
           </div>
           <p className="text-sm text-white/70">{t('footer.tagline')}</p>
